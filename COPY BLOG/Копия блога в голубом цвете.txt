@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head >
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<title>Мой блог</title>
+	<link rel="stylesheet" type="text/css" href="style_blog/style.css">
+	<link rel="icon" href="favicon/love.ico" type="image" sizes="16x16" >
+</head>
+<body>
+<div class="wrapper">
+	<div class="header">
+		<a href="index.html"><img src="image/blog.png"/></a>
+		<form id="contact-form" action="script.php" method="post">
+			<fieldset>
+				<ul>
+					<li>
+						<input type="text" name="name" id="name" value placeholder="Name" />
+					</li>
+					<li>
+						<input type="text" name="email" id="email" value placeholder="Email" />
+					</li>
+					<li>
+						<textarea name="comments" id="comments"  cols="25" rows="3" placeholder="Коментарии"></textarea>
+					</li>
+					<li>
+						<label class="mailing-list" for="mailing-list">Хотите подписаться на нашу рассылку?</label>
+						<input type="checkbox" checked="checked" id="mailing-list" value="Да, зарегистрировать меня!" />
+					</li>
+					<li>
+						<input class="form_bottom" type="submit" value="Отправить" />
+						<input class="form_bottom" type="reset" value="Очистить" />
+					</li>
+				</ul>
+			</fieldset>
+		</form>
+	</div>
+	<div class="content">
+		<div class="left">
+			<div class="article">
+			<img src="image/img.jpg/img _100x180.jpg"/>
+				<a href="#"><h3>Это статья</h3></a>
+			<p>Блог — веб-сайт, основное содержимое которого — регулярно добавляемые записи, содержащие текст, изображения
+				или мультимедиа. Для блогов характерны недлинные записи временной значимости, упорядоченные  в обратном
+				хронологическом порядке (последняя запись сверху). Отличия блога от ...
+				</p>
+				<div class="full"><a href="article.html/article_1.html">Подробнее &#187</a></div>
+			</div>
+			<div class="article">
+				<img src="image/img.jpg/img _1_100x180.jpg"/>
+				<a href="#"><h3>Это статья</h3></a>
+				<p>Блог — веб-сайт, основное содержимое которого — регулярно добавляемые записи, содержащие текст, изображения
+					или мультимедиа. Для блогов характерны недлинные записи временной значимости, упорядоченные  в обратном
+					хронологическом порядке (последняя запись сверху). Отличия блога от ...
+				</p>
+				<div class="full"><a href="#">Подробнее &#187</a></div>
+			</div>
+			<div class="article">
+				<img src="image/img.jpg/img_2_100x180.jpg"/>
+				<a href="#"><h3>Это статья</h3></a>
+				<p>Блог — веб-сайт, основное содержимое которого — регулярно добавляемые записи, содержащие текст, изображения
+					или мультимедиа. Для блогов характерны недлинные записи временной значимости, упорядоченные  в обратном
+					хронологическом порядке (последняя запись сверху). Отличия блога от ...
+				</p>
+				<div class="full"><a href="#">Подробнее &#187</a></div>
+			</div>
+			</div>
+		<div class="right">
+			<div class="right_menu">
+				<h3>MENU</h3>
+				<a href="index.html">HOME</a>
+				<a href="#">NEWS</a>
+				<a href="#">TRAVEL</a>
+				<a href="#">OTHER</a>
+				<a href="#">SOCIETY</a>
+			</div>
+			<div class="tags"><h3>TAGS</h3>
+				<ul>
+					<li>Adzhanata</li>
+					<li>Varkala</li>
+					<li>Ganga</li>
+					<li>Jaipur</li>
+					<li>Kerala</li>
+					<li>Adzhanata</li>
+					<li>Varkala</li>
+					<li>Ganga</li>
+					<li>Jaipur</li>
+					<li>Kerala</li>
+					<li>Adzhanata</li>
+					<li>Varkala</li>
+					<li>Ganga</li>
+					<li>Jaipur</li>
+					<li>Kerala</li>
+					<li>Ganga</li>
+					<li>Jaipur</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<p>Takani blog(с)2015</p>
+	</div>
+</div>
+</body>
+</html>

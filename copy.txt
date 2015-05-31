@@ -1,0 +1,209 @@
+﻿* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	height: 100%;
+	background: url("../texture/Beauty_59_by_Inthename_Stock.jpg");
+	background-size: cover;
+	background-attachment:fixed;
+	font-size: 14px;
+	font-family: Tahoma, Geneva, sans-serif;
+}
+a {
+	color: #444444;
+	text-decoration: none;
+}
+a:hover {
+	color: #71b4e8;
+}
+h3 {
+	text-align: center;
+	padding-bottom: 20px;
+}
+.wrapper {
+	width: 1000px;
+	background:#ffffff;
+	margin: 0 auto;
+}
+.header {
+	width: 100%;
+	height: 200px;
+	background: #ffffff;
+	margin-top: 20px;
+}
+#contact-form fieldset {
+	width:45%;
+	margin: -190px -120px;
+	float: right;
+	border: none;
+}
+#contact-form li {
+	margin:10px;
+	list-style: none;
+}
+#contact-form input  {
+	margin-left:10px;
+	text-align: left;
+}
+#contact-form textarea {
+	margin-left:10px;
+	text-align: left;
+}
+.mailing-list {
+	margin-left:10px;
+}
+.form_bottom {
+	width: 78px;
+	height: 20px;
+	background: #aaaaaa;
+	color: #ffffff;
+	text-decoration: none;
+	padding:0 7px 1px;
+	margin: 10px;
+	border-radius: 3px;
+	font-weight: normal;
+}
+.content {
+	width: 100%;
+}
+.left {
+	width: 980px;
+	padding: 10px;
+	float: left;
+	background: #ffffff;
+}
+.article {
+	width: 955px;
+	height: 180px;
+	padding: 10px;
+	margin-bottom: 15px;
+	border: 1px solid darkgray;
+	box-shadow:
+	10px 0 15px -15px rgba(0, 10, 0, 0.7),
+	10px 0 10px -23px rgba(0, 10, 0, 0.5),
+	20px 0 10px -20px rgba(0, 10, 0, 0.5),
+	0 0 40px rgba(0, 10, 0, 0.1) inset;
+}
+.article:hover {
+	background: #f2f2f2;
+}
+.article img {
+	float: left;
+	margin-right: 20px;
+}
+.article p {
+	float: none;
+	text-align: justify;
+	padding: 10px;
+	padding-top:0;
+}
+.title {
+	margin-right: 15px;
+}
+.full {
+	text-decoration: none;
+	min-height: 15px;
+	min-width: 95px;
+	display: inline-block;
+	margin: 24px 0 0 700px;
+	font-size: 14px;
+	padding: 7px 0 6px 0;
+	text-align: center;
+	border-radius: 5px;
+	background: darkgray;
+}
+.full a:hover {
+	color: #ffffff;
+}
+.article_full {
+	width: 955px;
+	height: 100%;
+	background: #ffffff;
+	padding: 10px;
+	margin-bottom: 15px;
+	border: 1px solid darkgray;
+	box-shadow:
+	10px 0 15px -15px rgba(0, 10, 0, 0.7),
+	10px 0 10px -23px rgba(0, 10, 0, 0.5),
+	20px 0 10px -20px rgba(0, 10, 0, 0.5),
+	0 0 40px rgba(0, 10, 0, 0.1) inset;
+}
+.article_full p {
+	float: none;
+	text-align: justify;
+	padding: 10px 5px;
+	text-indent: 20px;
+	line-height: 1.4;
+}
+.article_full img {
+	float: left;
+	padding: 0 10px 0 10px;
+}
+.right {
+	width: 175px;
+	height: 187px;
+	background: #f2f2f2;
+	padding-top: 18px;
+	padding-bottom: 10px;
+	margin: 10px -190px;
+	box-shadow: 23px 0 20px -23px rgba(0, 0, 0, 0.6),
+	0 0 40px rgba(0, 5, 0, 0.1) inset;
+	border-radius:3px;
+	position: fixed;
+}
+
+.right_menu a {
+	width: 120px;
+	height: 27px;
+	display: block;
+	text-align: left;
+	margin: 1px 20px;
+	padding-top: 3px;
+	text-decoration:none;
+}
+.tags {
+	width: 175px;
+	height: 439px;
+	background: #f2f2f2;
+	margin: 10px 0;
+	padding-top: 18px;
+	font-family: "Helvetica Neue", Arial, "Lucida Grande", sans-serif;
+	box-shadow:
+	23px 0 20px -23px rgba(0, 0, 0, 0.6),
+	0 0 40px rgba(0, 5, 0, 0.1) inset;
+	border-radius: 3px;
+	position: fixed;
+}
+.tags li{
+	list-style-type: none;
+	height: 27px;
+	margin: 1px 20px;
+	padding-top: 0;
+}
+.tags li:hover {
+	color: #71b4e8;
+}
+.footer_article_full {
+	width: 1000px;
+	height: 100px;
+	text-align: center;
+	color: #aaaaaa;
+	padding-top: 30px;
+	margin: 452px;
+	background: #ffffff;
+	clear: both;
+}
+.footer {
+	width: 1000px;
+	height: 100px;
+	padding: 10px;
+	color: #aaaaaa;
+	text-align: center;
+}
+.footer:hover, .footer_article_full:hover {
+	color: #333333;
+}
+.footer p {
+	padding-top: 70px;
+}
