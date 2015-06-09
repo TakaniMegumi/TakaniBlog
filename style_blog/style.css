@@ -12,7 +12,7 @@ body {
 	background: white;
 	background-size: cover;
 	background-attachment: fixed;
-	font-family: "Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
+	font-family: 'Dosis', 'Tahoma', sans-serif;
 	line-height: 1.54em;
 	font-weight: 100;
 	letter-spacing: 0.02em;
@@ -36,33 +36,11 @@ p {
 	padding: 10px;
 	text-align: center;
 	opacity: 0.8;
-	font-size: 12px;
+	font-size: 14px;
 	position: relative;
 }
 li a:hover {
 	color: #008B8B;
-}
-.content {
-	width: 100%;
-	height: 800px;
-	margin-bottom: -10px;
-	display: inline-block;
-	background: white;
-	border: 1px solid gainsboro;
-}
-.header {
-	width: 100%;
-	height: 210px;
-	background: #AFEEEE;
-	margin-top: 0;
-	margin-bottom: 0;
-}
-.header_logo {
-	width: 90px;
-	height: 90px;
-	float: left;
-	margin-top: 55px;
-	margin-left: 570px;
 }
 .header_logo_page,  .header_logo_page_news{
 	width: 90px;
@@ -83,14 +61,6 @@ li a:hover {
 }
 .header_page_news li a{
 	color: white;
-}
-.menu li{
-	padding: 3px;
-	margin: 90px 10px 0 50px;
-	list-style-type: none;
-	display: inline-block;
-	float: left;
-	font-weight: 500;
 }
 .menu_page li, .menu_news li{
 	padding: 3px;
@@ -134,7 +104,7 @@ li a:hover {
 .tags_page p {
 	text-align: left;
 	color: black;
-	font-family: "Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
+	font-family: 'Dosis', 'Tahoma', sans-serif;
 	font-size: 16px;
 	line-height: 1.5;
 	padding: 10px 30px;
@@ -193,23 +163,37 @@ li a:hover {
 }
 .article_news p {
 	width: 50%;
-	margin-left: 20%;
-	font-size: 22px;
-	line-height: 1.54em;
+	margin-left: 21%;
+	font-size: 24px;
+	line-height: 1.6em;
 	padding: 100px;
 	color: white;
 	text-align: left;
+	font-family: 'Dosis', 'Tahoma', sans-serif;
+	margin-top: -30px;
 }
 .article_news h3{
 	font-size: 2.8em;
-	padding-top: 50px;
-	font-family: 'BodoniW01-PosterItalic';
+	padding-top: 100px;
+	font-family: 'Dosis', 'Tahoma', sans-serif;
 	color: white;
 	font-weight: 500;
 }
-.article_news_text {
-	-webkit-column-count: 3;
-	column-count: 3;
+.icon_news img{
+	width: 100px;
+	margin-bottom: -40px;
+}
+.icon_news li {
+	margin-left: 90px;
+	margin-bottom: 80px;
+	list-style-type: none;
+	display: inline-block;
+}
+.icon_news ul {
+	margin-left: 520px;
+}
+.article_news h3 {
+	clear: both;
 }
 /*slider*/
 #slider {
@@ -248,7 +232,7 @@ li a:hover {
 }
 .foto_news img {
 	width: 100%;
-	height: 1200px;
+	height: 1300px;
 	background-size: cover;
 }
 .foto_news {
