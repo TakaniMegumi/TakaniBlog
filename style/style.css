@@ -198,61 +198,108 @@ p {
 .button:hover {
 	color: #008B8B;
 }
-
 /*calculate*/
-table {
-	width: 350px;
-	height: 500px;
-	margin-left: 300px;
-	padding: 50px 0 50px 30px;
-	border-radius: 10px;
-	border: 1px  solid gray;
-	background: #AFEEEE;
-	box-shadow: inset 2px 3px 20px 2px grey;
-
-}
-#input-line {
-	width: 300px;
-	height: 35px;
-	margin-left: -13px;
-	font-size: 22px;
-	padding-right: 8px;
-	text-align: right;
-	background: white;
-	border-radius: inherit;
-	box-shadow: none;
-}
-.content-calc {
+.content-clr {
 	width: 1000px;
 	margin-left: auto;
 	margin-right: auto;
 	padding-top: 308px;
-	padding-bottom: 200px;
+	padding-bottom: 250px;
 	background: white;
 }
+#inputLine {
+	width: 340px;
+	height: 65px;
+	font-size: 48px;
+	padding-right: 8px;
+	text-align: right;
+	border-radius: inherit;
+	background: black;
+	color: white;
+	border: 3px  solid gray;
+	box-shadow: inset 1px 0.5px 1px 2px white;
+}
+table {
+	width: 400px;
+	height: 450px;
+	margin-left: 300px;
+	padding: 40px 0 10px 20px;
+	border-radius: 20px;
+	border: 3px  solid gray;
+	background: #9dd2ea;
+	box-shadow: 1px 4px 5px 2px grey;
+	background-image: url("../image/icon.png/fluttershy_bunny_by_pewdiedash-d54xxbu.png");
+	background-size: cover;
+	background-position: top;
+}
+#dateTime {
+	width: 110px;
+	height: 36px;
+	font-size: 24px;
+	text-align: center;
+	border-radius: 1px;
+	padding-top: 2px;
+	background: black;
+	border: 3px  solid gray;
+	box-shadow: inset 1px 0.5px 1px 2px white;
+	color: lawngreen;
+}
+#plus, #multiply, #minus, #divide {
+	background: lawngreen;
+	box-shadow: inset 1px 0.5px 8px 2px green;
+	border: 2px  solid green;
+	font-weight: 600;
+}
+#plus:hover, #multiply:hover, #minus:hover, #divide:hover {
+	background: white;
+	color: green;
+}
+#equals {
+	color: white;
+	background: red;
+	border: 2px  solid crimson;
+	box-shadow: inset 3px 1px 4px 2px crimson;
+}
+#equals:hover {
+	color: red;
+	background: white;
+	border: 2px  solid crimson;
+	box-shadow: inset 1px 0.5px 8px 2px crimson;
+}
+
+#reset {
+	color: white;
+	background: dodgerblue;
+	border: 2px  solid blue;
+	box-shadow: inset 3px 1px 8px 2px blue;
+}
+#reset:hover {
+	color: blue;
+	background: white;
+	border: 2px  solid blue;
+	box-shadow: inset 1px 0.5px 8px 2px blue;
+}
 .multiplication input{
-	padding-top: 6px;
+	padding-top: 5px;
+
 }
-.tblCalc input{
-	width: 40px;
-	height: 25px;
-	border: 1px solid gray;
-	border-radius: 50px;
-	font-size: 18px;
-	outline:0;
-	box-shadow: inset 2px 3px 5px 2px #aaaaaa;
+.calculatorKeys  input {
+	width: 65px;
+	height: 45px;
+	border-radius: 10px;
+	font-size: 20px;
+	border: 2px solid magenta;
+	box-shadow: inset 3px 0.5px 15px 3px blueviolet;
+	cursor: pointer;
+	transition: all 0s ease;
+	outline: 0;
 }
-.tblCalc input:hover {
-	background: darkgrey;
-	box-shadow: inset 2px 3px 5px 2px white;
+.calculatorKeys input:hover {
+	background: white;
+	border: 2px solid magenta;
+	box-shadow: inset 2px 0.5px 7px 2px blueviolet;
+	transition: all 0.1s ease;
 }
-
-
-
-
-
-
-
 .footer {
 	width: 100%;
 	height: 90px;
@@ -268,6 +315,8 @@ table {
 .footer p:hover {
 	color: #717171;
 }
+
+
 
 
 
