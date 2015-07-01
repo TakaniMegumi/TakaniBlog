@@ -8,7 +8,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="../style/mobile.css">
 </head>
-<body>
+<body id="body-overflow">
 <div class="header">
 	<a href="../index.html"><img class="header-logo" src="../image/icon.png/blog.png" alt=""></a>
 <div class="menu">
@@ -58,6 +58,7 @@
 	<div class="footer">
 		<p>Takani blog(с)2015</p>
 	</div>
+<script src="../js/calculate.js"></script>
 </body>
 </html>
 
@@ -66,95 +67,6 @@
 
 
 
-<script>
-	var num1;
-	var num2;
-	var operation;
-    var replyClick;
-
-
-
-    replyClick = function () {
-		if (!operation) {
-			Number = document.getElementById('inputLine').value;
-		} else {
-			Number = document.getElementById('inputLine').value;
-		}
-		document.getElementById('inputLine').value = operation;
-		console.log(this.id)
-    };
-
-    setOperation = function() {
-        operation = this.id;
-    };
-
-    calculate = function () {
-        if(operation == 'plus') {
-          document.getElementById('inputLine').value = Number(num1) + Number(num2);
-        }
-        if(operation == 'minus') {
-          document.getElementById('inputLine').value = Number(num1) - Number(num2);
-        }
-        if(operation == 'multiply') {
-          document.getElementById('inputLine').value = Number(num1) * Number(num2);
-        }
-        if(operation == 'divide') {
-          document.getElementById('inputLine').value = Number(num1) / Number(num2);
-        }
-        num1 = NaN;
-        num2 = NaN;
-    };
-
-    clearData = function () {
-        num1 = NaN;
-        num2 = NaN;
-        operation = NaN;
-    };
-
-
-    function getTime() {
-        var today = new Date();
-        var h = today.getHours();
-        var m = today.getMinutes();
-        var s = today.getSeconds();
-
-        document.getElementById('dateTime').value = h + ':' + m + ':' + s;
-    }
-
-    setInterval(getTime, 10);
-
- for (i = 0; i < 10; i++) {
-     document.getElementById(String(i)).onclick = replyClick;
-}
-
-document.getElementById('plus').onclick = setOperation;
-document.getElementById('minus').onclick = setOperation;
-document.getElementById('divide').onclick = setOperation;
-document.getElementById('multiply').onclick = setOperation;
-document.getElementById('equals').onclick = calculate;
-document.getElementById('reset').onclick = clearData;
-
-//infiniteDate();
-
-</script>
-
-
-
-
-
-
-
-
-
-
-<!--
-
-if(operation == 0) {
-			document.getElementById('inputLine').value = this.id;
-		}
-			else
-			document.getElementById('inputLine').value += this.id;
-		};
 
 
 
@@ -169,65 +81,5 @@ if(operation == 0) {
 
 
 
-
-<script
-var num1;
-var num2;
-var operation;
-var replyClick;
-replyClick = function () {
-if (num1 == "") {
-num1 = document.getElementById('inputLine').value = this.id;
-}
-if (num1!== "") {
-num2 = document.getElementById('inputLine').value = this.id;
-}
-document.getElementById('inputLine').value = this.id;
-};
-function divide(){
-
-}
-}
-
-
-
-
-
-
-число1 // число
-		число2 // число
-		операцияНадЧислами //строка
-		var replyClick;
-		replyClick = function () {
-			если число1 пусто (переменная число1 не инициализирована)
-				число 1 = document.getElementById('inputLine').value = this.id;
-			если число1 не пусто (переменная число1 инициализирована)
-				число2 = document.getElementById('inputLine').value = this.id;
-			document.getElementById('inputLine').value = this.id;
-		};
-
-		функция, срабатывающая на равно(){
-			var результат;
-			если операцияНадЧислами равняется "плюс"
-				то результат = число1+число2;
-
-			если операцияНадЧислами равняется "минус"
-				то результат = число1-число2;
-
-			если операцияНадЧислами равняется "умножить"
-				то результат = число1*число2;
-
-			если операцияНадЧислами равняется "разделить"
-				то результат = число1/число2;
-			/*
-			* TODO: найти табло, вывести в табло переменную результат.
-			*
-			*
-			* */
-		}
-
-
-
--->
 
 

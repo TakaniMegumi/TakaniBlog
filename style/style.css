@@ -64,6 +64,20 @@ p {
 	float: left;
 	font-weight: 500;
 }
+.reg , .log  {
+	width: 70px;
+	height: 25px;
+	margin: 40px 20px 0 20px;
+	text-align: center;
+	color: white;
+	float:right;
+	border: 1px solid #008B8B;
+	border-radius: 5px;
+	background: #00CCCC;
+}
+.reg:hover , .log:hover {
+	color: black;
+}
 .content {
 	width: 100%;
 	background: white;
@@ -198,6 +212,65 @@ p {
 .button:hover {
 	color: #008B8B;
 }
+/*form*/
+.formLogo {
+	width: 120px;
+	height: 120px;
+	padding-top: 10px;
+	margin-left: 890px;
+}
+.contentSignUp {
+	width: 100%;
+	height: 1049px;
+	background: url("../image/img.jpg/tumblr_msjtpsLtbg1qzya49o1_1280.jpg");
+	background-size: cover;
+	padding-top: 100px;
+	margin-bottom: 0;
+}
+#signUp input{
+	outline: none;
+	padding-top: 2px;
+	padding-left: 5px;
+	font-size: 18px;
+}
+#signUp h2 {
+	color: #00CCCC;
+	padding-bottom: 20px;
+}
+#signUp p {
+	padding-bottom: 30px;
+	font-size: 18px;
+	color: white;
+	font-weight: 500;
+}
+#signUp_username, #signUp_email, #signUp_password, #logIn_submit {
+	width: 300px;
+	height: 50px;
+	border: 1px solid gainsboro;
+}
+.formSignUp form{
+	width: 800px;
+	height: 400px;
+	text-align: center;
+	padding-top: 40px;
+	margin-left: 550px;
+	/*background: white;*/
+}
+#signUp_submit, #signUp_reset, #logIn_submit {
+	margin-top: 10px;
+	width: 306px;
+	height: 50px;
+}
+#signUp_submit, #logIn_submit {
+	background: #00CCCC;
+	color: white;
+	border: 1px solid  #00CCCC;
+}
+#signUp_reset {
+	background: black;
+	color: white;
+	border: 1px solid  black;
+}
 /*calculate*/
 .content-clr {
 	width: 1000px;
@@ -247,7 +320,7 @@ table {
 #plus, #multiply, #minus, #divide {
 	background: lawngreen;
 	box-shadow: inset 1px 0.5px 8px 2px green;
-	border: 2px  solid green;
+	border: 3px  solid green;
 	font-weight: 600;
 }
 #plus:hover, #multiply:hover, #minus:hover, #divide:hover {
@@ -288,7 +361,7 @@ table {
 	height: 45px;
 	border-radius: 10px;
 	font-size: 20px;
-	border: 2px solid magenta;
+	border: 3px solid magenta;
 	box-shadow: inset 3px 0.5px 15px 3px blueviolet;
 	cursor: pointer;
 	transition: all 0s ease;
