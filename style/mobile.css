@@ -18,6 +18,10 @@
 	.menu li {
 		margin-left: 3%;
 	}
+	.reg , .log {
+		border-radius: 10px;
+		margin: -20px 180px 0 -100px;
+	}
 	.article h3 {
 		line-height: 1.54em;
 		margin-bottom: 30px;
@@ -62,7 +66,7 @@
 		width: 100%;
 	}
 	.icon ul {
-		margin-left: 50px;
+		margin-left: 40px;
 	}
 	.form {
 		width: 84%;
@@ -73,11 +77,23 @@
 		margin-bottom: 10px;
 		float: left;
 	}
+	.formLogo {
+		width: 100px;
+		height: 100px;
+		padding-top: 0;
+		margin-left: 260px;
+	}
+	.contentSignUp {
+		background-position: center;
+	}
+	.formSignUp form {
+		margin-left: -90px;
+	}
 	/*calculate*/
 	.content-clr {
 		margin-left: -200px;
-		padding-top: 120px;
-		padding-bottom: 20px;
+		padding-top: 195px;
+		padding-bottom: 75px;
 	}
 	.footer {
 		margin-top: -10px;
