@@ -1,26 +1,38 @@
 ﻿<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/html">
+<html xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
 <head>
 	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
-	<title>Мой блог</title>
+	<title>Takani blog</title>
 	<link rel="stylesheet" type="text/css" href="../style/style.css">
-	<link rel="icon" href="../favicon/love.ico" type="image/gif" sizes="16x16" >
+	<link rel="icon" href="../favicon/favicon.ico" type="image/gif" sizes="16x16" >
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="../style/mobile.css">
 </head>
 <body id="body-overflow">
 	<div class="contentSignUp">
 		<a href="../index.html"><img class="formLogo" src="../image/icon.png/blog.png" alt=""></a>
-		<div class="formSignUp">
-	<form id="signUp" action="#">
-		<p>To follow Takani blog, just sign up!</p>
-		<input id="signUp_username" type="text" name="blogLog[name]" placeholder="Username"/><br>
-		<input id="signUp_email" type="email" name="user[email]" placeholder="Email"/><br>
-		<input id="signUp_password" type="password" name="user[password]" placeholder="Password"/><br>
-		<input id="signUp_submit" type="submit" value="Sign Up"/><br>
-		<input id="signUp_reset" type="reset" value="Reset"/>
-	</form>
-		</div>
+	<div id="signUp">
+		<p id="message">To follow Takani blog, just sign up!</p>
+		<input id="signUp_email" type="email" name="email"  placeholder="Email" /><br>
+		<div id="signUp_email_error">*This field is required,please fill in:)</div>
+		<div id="email_error">This e-mail address already exists, please enter another:)</div>
+		<input id="signUp_username" type="text" name="name" placeholder="Username"/><br>
+		<div id="signUp_username_error">*This field is required,please fill in:)</div>
+		<div id="username_error">This name already exists, please enter another:)</div>
+		<input id="signUp_password" type="password" name="password" placeholder="Password"/><br>
+		<div id="signUp_password_error">*This field is required,please fill in:)</div>
+		<input id="signUp_confirmPassword" type="password" name="password2" placeholder="Confirm password"/><br>
+		<div id="signUp_confirmPassword_error">*Wrong!!!Enter again,please:)</div>
+		<input id="signUp_submit" type="button" value="Sign Up"/><br>
 	</div>
+		</div>
 </body>
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="../js/signUp.js"></script>
 </html>
+
+
+
+
+
+

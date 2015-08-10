@@ -11,7 +11,6 @@
 				num1 = num1 + this.id;
 			}
 			document.getElementById('inputLine').value = num1;
-
 		} else {
 			if (!num2) {
 				num2 = this.id;
@@ -27,7 +26,6 @@
 				operation = num2;
 			}
 			document.getElementById('inputLine').value = num2;
-			console.log(num2);
 		}
 		};
     setOperation = function() {
@@ -47,7 +45,6 @@
 		if (operation == 'divide') {
 			document.getElementById('inputLine').value = Math.round((Number(num1) / Number(num2))*1000)/1000;
 		}
-		console.log(num2);
 		if (!num2) {
 			document.getElementById('inputLine').value = num1;
 		}

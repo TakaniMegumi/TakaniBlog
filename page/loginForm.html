@@ -2,23 +2,26 @@
 <html xmlns="http://www.w3.org/1999/html">
 <head>
 	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
-	<title>Мой блог</title>
+	<title>Takani blog</title>
 	<link rel="stylesheet" type="text/css" href="../style/style.css">
-	<link rel="icon" href="../favicon/love.ico" type="image/gif" sizes="16x16" >
+	<link rel="icon" href="../favicon/favicon.ico" type="image/gif" sizes="16x16" >
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="../style/mobile.css">
 </head>
 <body id="body-overflow">
 <div class="contentSignUp">
 	<a href="../index.html"><img class="formLogo" src="../image/icon.png/blog.png" alt=""></a>
-	<div class="formSignUp">
-		<form id="signUp" action="#">
-			<input id="signUp_email" type="email" name="user[email]" placeholder="Email"/><br>
-			<input id="signUp_password" type="password" name="user[password]" placeholder="Password"/><br>
+		<div id="logIn">
+			<input id="logIn_email" type="email" name="email" placeholder="Email"/><br>
+			<div id="logIn_email_error">*This field is required:)</div>
+			<div id="logIn_error">Incorrect email, please enter again:)</div>
+			<input id="logIn_password" type="password" name="password" placeholder="Password"/><br>
+			<div id="logIn_password_error">*This field is required:)</div>
+			<div id="password_logIn_error">You wrote an incorrect password, please enter again</div>
 			<input id="logIn_submit" type="submit" value="Log in"/><br>
-			<input id="signUp_reset" type="reset" value="Reset"/>
-		</form>
+		</div>
 	</div>
-</div>
 </body>
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="../js/logIn.js"></script>
 </html>
