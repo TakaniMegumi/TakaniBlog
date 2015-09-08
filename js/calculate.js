@@ -79,6 +79,6 @@ document.getElementById('multiply').onclick = setOperation;
 document.getElementById('equals').onclick = calculate;
 document.getElementById('reset').onclick = clearData;
 
-//infiniteDate();
+
 
 

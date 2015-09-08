@@ -152,6 +152,19 @@ p {
 	width: 600px;
 	margin: 20px 0 20px 170px;
 }
+.tags-photo1 {
+	width: 100%;
+	height: 953px;
+	margin-top: 110px;
+	opacity: 0;
+	position: absolute;
+}
+.tags-photo-first {
+	width: 100%;
+	height: 953px;
+	margin-top: 110px;
+	position: absolute;
+}
 .photo-home img {
 	width: 100%;
 	height: 1300px;
@@ -178,14 +191,75 @@ p {
 	margin-left: 10px;
 	border: none;
 }
+.avatar {
+	width: 30px;
+	height: 30px;
+	background-size: cover;
+	background-attachment: fixed;
+}
+#creatorUl li{
+	list-style: none;
+	font-size: 14px;
+	line-height: 1.5;
+	padding-bottom: 10px;
+}
+.styleLogin {
+	margin-top: 12px;
+	margin-bottom: -50px;
+	margin-left: 95px;
+	color: deepskyblue;
+}
+.styleDate {
+	padding-top: 35px;
+	margin-left: 95px;
+	margin-bottom: -20px;
+	color: #00CCCC;
+}
+.styleText {
+	width: 500px;
+	margin-left: 35px;
+	margin-top: -10px;
+	position: relative;
+	list-style: none;
+}
+#newText {
+	width: 100%;
+	padding: 10px;
+	margin-left: -6px;
+}
+.styleUserPic img {
+	width: 55px;
+	height: 50px;
+	background-size: cover;
+	margin-left: 30px;
+	margin-top: -22px;
+	margin-bottom: 10px;
+	border: 1px solid gainsboro;
+}
+.wordComments p{
+	color: #00CCCC;
+	font-family: 'Courier New', Courier, monospace;
+	font-size: 22px;
+	font-weight: 600;
+}
+.thinkPic {
+	width: 100px;
+	height: 80px;
+	margin-left: 30px;
+}
 #parentUl  li{
-	margin: 5px 0 0 30px;
+	display: inline-flex;
+	margin: 20px 0 0 30px;
 	list-style: none;
 	font-size: 12px;
 	width: 500px;
 	line-height: 1.5;
 	padding-bottom: 10px;
-
+}
+.pencilImg {
+	width: 20px;
+	height: 20px;
+	margin-left: 500px;
 }
 #comments {
 	outline: none;
@@ -304,6 +378,7 @@ p {
 #signUp_email,
 #signUp_password,
 #signUp_confirmPassword,
+#signUp_userPic,
 #logIn_submit,
 #logIn_email,
 #logIn_password {

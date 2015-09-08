@@ -29,7 +29,9 @@ function setOperation() {
 		$.post("http://52.26.206.29:3000/users/signUp",	{
 				login: document.getElementById('signUp_username').value,
 				email: document.getElementById('signUp_email').value,
-				password: document.getElementById('signUp_password').value
+				password: document.getElementById('signUp_password').value,
+			    userpic: document.getElementById('signUp_userPic').value
+
 			})
 			.done(function(data){
 				localStorage.setItem('authorization', 'Bearer ' + data.token);
