@@ -227,6 +227,26 @@ p {
 	padding: 10px;
 	margin-left: -6px;
 }
+#buttonNewTextCancel, #buttonNewTextOk {
+	width: 50px;
+	height: 20px;
+	margin-right: -15px;
+	margin-left: 20px;
+	float: right;
+	background: #5bc0de;
+	border-radius: 5px;
+	border: 3px solid #46b8da;
+	cursor: pointer;
+	color: white;
+	font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;;
+	font-size: 12px;
+	font-weight: 600;
+}
+
+#buttonNewTextCancel:hover, #buttonNewTextOk:hover {
+	color: #717171;
+}
+
 .styleUserPic img {
 	width: 55px;
 	height: 50px;
