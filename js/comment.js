@@ -43,51 +43,19 @@ function submitComment() {
 document.getElementById('enterComment').onclick = submitComment;
 
 
-
-
 function formatDate(dateObject) {
 	var date = new Date(dateObject);
 	return  date.toLocaleDateString() + ' in ' + date.getHours() + ':' + date.getMinutes();
 }
 
-
-
-
 var globalId;
 
 
-
-function showForm (id) {
-/*
-		globalId = id;
-		console.log(id);
-
-		var creatorDiv = document.getElementById('creatorDiv');
-		var text = '<li class="styleText">';
-		{
-
-				text += '<textarea id="newText" >' + '</textarea>';
-				text += '<input  id="buttonNewTextCancel" onclick="exitForm ()" type="button" value="Cancel" ">' + '</input >';
-				text += '<input  id="buttonNewTextOk" onclick="sendPut()" type="button" value="Ok">' + '</input >';
-
-		}
-		text += '</li>';
-		document.getElementById('creatorDiv').innerHTML += text;
-
-*/
-}
-
-
-
-
-function exitForm (){
+    function exitForm (){
 	document.getElementById('newText').style.display = "none";
 	document.getElementById('buttonNewTextOk').style.display = "none";
 	document.getElementById('buttonNewTextCancel').style.display = "none";
 	}
-
-
-
 
 
 	 function sendPut(){
@@ -105,13 +73,34 @@ function exitForm (){
 		dataType: 'json',
 
 		success: function(responseData) {
-				document.getElementById('styleText').innerHTML = document.getElementById('newText').value;
 		},
 		error: function (responseData){
-
 		}
 	})
 	}
+
+
+
+     function makeDelete(callback){
+	$.ajax({
+		beforeSend: function(xhr) {
+			console.log(localStorage.getItem('authorization'));
+			xhr.setRequestHeader('Authorization', localStorage.getItem('authorization'));
+			xhr.setRequestHeader('Content-Type', 'application/json');
+		},
+		type: 'DELETE',
+		url: 'http://52.26.206.29:3000/comments/'  + globalId,
+		crossDomain: true,
+		dataType: 'json',
+
+		success: function(responseData) {
+			callback();
+			console.log('Comment deleted successfully!');
+		},
+		error: function (responseData){
+		}
+	})
+}
 
 
 	$.ajax({
@@ -121,7 +110,7 @@ function exitForm (){
 			xhr.setRequestHeader('Content-Type', 'application/json');
 		},
 		type: 'GET',
-		url: 'http://52.26.206.29:3000/comments?article_id=1&limit=10&offset=10',
+		url: 'http://52.26.206.29:3000/comments?article_id=1&limit=10&offset=0',
 		crossDomain: true,
 		dataType: 'json',
 
@@ -130,12 +119,15 @@ function exitForm (){
 			var text = '<ul>';
 
 			for (var i = 0; i < responseData.length; i++) {
+				text += '<div>';
 				text += '<li class="styleLogin">' + responseData[i].profile.login + '</li>';
 				text += '<li class="styleDate">' + formatDate(responseData[i].created_at) + '</li>';
 				text += '<li class="styleUserPic">' + '<img width=35 height=30 src="' + responseData[i].profile.userpic + '"/></li>';
-				text += '<li id="' + responseData[i].id + '"  class="styleText">' + responseData[i].text + '</li>';
-				text += '<li id="TextId"  class="styleText" commentId="' + responseData[i].id + '" >' + '<img class="pencilImg"  style="cursor: pointer;" src="../image/icon.png/pencil.png" alt="">' + '</li>';
+				text += '<li id="DeleteText"  deleteId="' + responseData[i].id + '">' + '<img class="deleteImg"  src="../image/icon.png/delete_32x32.png" alt="">' + '</li>';
+				text += '<li comId="' + responseData[i].id + '"  class="styleText">' + responseData[i].text + '</li>';
+				text += '<li id="TextId"  class="styleText" commentId="' + responseData[i].id + '" >' + '<img class="pencilImg" src="../image/icon.png/pencil.png" alt="">' + '</li>';
 				text += '<hr size=0 width=500px color=#DCDCDC style="margin-left: 30px; margin-bottom: -0.5px">';
+				text += '</div>';
 			}
 			text += '</ul>';
 			document.getElementById('creatorUl').innerHTML = text;
@@ -151,33 +143,37 @@ function exitForm (){
 			console.log('POST failed');
 		}
 	});
-/*
-$('#comment-wrapper').on('click', function() {
-	console.log('wrapper active');
-});
-*/
+
+
 $('body').on('click', '#TextId', function() {
-	//<li id="TextId" class="styleText" commentid="409"><img class="pencilImg" style="cursor: pointer;" src="../image/icon.png/pencil.png" alt=""></li>
 	globalId = $(this).attr('commentId');
-
 	$(this).replaceWith('<li class="styleText"><textarea id="newText" >' + '</textarea> <input  id="buttonNewTextCancel" onclick="exitForm ()" type="button" value="Cancel" ">' + '</input ><input  id="buttonNewTextOk" onclick="sendPut()" type="button" value="Ok">' + '</input ></li>');
-
-	/*
-	var creatorDiv = document.getElementById('creatorDiv');
-	var text = '<li class="styleText">';
-	{
-
-		text += '<textarea id="newText" >' + '</textarea>';
-		text += '<input  id="buttonNewTextCancel" onclick="exitForm ()" type="button" value="Cancel" ">' + '</input >';
-		text += '<input  id="buttonNewTextOk" onclick="sendPut()" type="button" value="Ok">' + '</input >';
-
-	}
-	text += '</li>';
-	document.getElementById('creatorDiv').innerHTML += text;
-	*/
-
 });
 
+
+/*This one deletes comment*/
+$(function(){
+	$('body').on('click','#DeleteText', function()  {
+		globalId = $(this).attr('deleteId');
+		thisCopy = this;
+		//TODO: READ ABOUT CALLBACK!!! =)
+		//TODO: READ ABOUT 'THIS'!!! =)
+		//TODO: READ ABOUT 'CLOSURE'(замыкания)!!! =)
+			makeDelete(function(){
+			$(thisCopy).closest('div').remove();
+		});
+
+		//$(this).replaceWith(makeDelete);
+		console.log('wrapper active');
+	});
+});
+
+$(function(){
+	$('body').on('click', '#buttonNewTextOk', function(){
+		$(this).replaceAll('comId');//actions
+		console.log('wrapper active');
+	});
+});
 
 
 

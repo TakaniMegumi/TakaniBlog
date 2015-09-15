@@ -222,6 +222,7 @@ p {
 	position: relative;
 	list-style: none;
 }
+
 #newText {
 	width: 100%;
 	padding: 10px;
@@ -256,6 +257,7 @@ p {
 	margin-bottom: 10px;
 	border: 1px solid gainsboro;
 }
+
 .wordComments p{
 	color: #00CCCC;
 	font-family: 'Courier New', Courier, monospace;
@@ -280,6 +282,15 @@ p {
 	width: 20px;
 	height: 20px;
 	margin-left: 500px;
+	cursor: pointer;
+}
+.deleteImg  {
+	width: 15px;
+	height: 15px;
+	margin-left: 535px;
+	float:left;
+	margin-top: -60px;
+	cursor: pointer;
 }
 #comments {
 	outline: none;
