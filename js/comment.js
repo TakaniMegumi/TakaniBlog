@@ -29,6 +29,8 @@ function submitComment() {
 				}
 				text += '</ul>';
 				document.getElementById('creatorUl').innerHTML += text;
+
+				document.getElementById('contactForm').reset();
 			},
 			error: function (responseData) {
 				console.log('POST failed');
@@ -80,7 +82,6 @@ var globalId;
 	}
 
 
-
      function makeDelete(callback){
 	$.ajax({
 		beforeSend: function(xhr) {
@@ -98,6 +99,7 @@ var globalId;
 			console.log('Comment deleted successfully!');
 		},
 		error: function (responseData){
+				$(thisCopy).animate({'margin-left': "0"}, 0);
 		}
 	})
 }
@@ -119,7 +121,7 @@ var globalId;
 			var text = '<ul>';
 
 			for (var i = 0; i < responseData.length; i++) {
-				text += '<div>';
+				text += '<div id="opacityDiv">';
 				text += '<li class="styleLogin">' + responseData[i].profile.login + '</li>';
 				text += '<li class="styleDate">' + formatDate(responseData[i].created_at) + '</li>';
 				text += '<li class="styleUserPic">' + '<img width=35 height=30 src="' + responseData[i].profile.userpic + '"/></li>';
@@ -153,27 +155,26 @@ $('body').on('click', '#TextId', function() {
 
 /*This one deletes comment*/
 $(function(){
-	$('body').on('click','#DeleteText', function()  {
-		globalId = $(this).attr('deleteId');
-		thisCopy = this;
-		//TODO: READ ABOUT CALLBACK!!! =)
-		//TODO: READ ABOUT 'THIS'!!! =)
-		//TODO: READ ABOUT 'CLOSURE'(замыкания)!!! =)
-			makeDelete(function(){
-			$(thisCopy).closest('div').remove();
-		});
 
-		//$(this).replaceWith(makeDelete);
-		console.log('wrapper active');
-	});
+		$('body').on('click', '#DeleteText', function () {
+			globalId = $(this).attr('deleteId');
+			thisCopy = this;
+			$(thisCopy).animate({'margin-left': "350px"}, 200);
+			//TODO: READ ABOUT CALLBACK!!! =)
+			//TODO: READ ABOUT 'THIS'!!! =)
+			//TODO: READ ABOUT 'CLOSURE'(замыкания)!!! =)
+			makeDelete(function () {
+				$(thisCopy).closest('div').remove();
+			});
+		});
 });
 
 $(function(){
 	$('body').on('click', '#buttonNewTextOk', function(){
-		$(this).replaceAll('comId');//actions
 		console.log('wrapper active');
-	});
+	    });
 });
+
 
 
 
