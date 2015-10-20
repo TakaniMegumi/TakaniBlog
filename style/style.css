@@ -6,7 +6,7 @@
 	overflow-x: hidden;
 }
 body {
-	background: white;
+	background: #DCDCDC;
 	background-size: cover;
 	background-attachment: fixed;
 	font-family: 'Dosis', 'Tahoma', sans-serif;
@@ -84,10 +84,10 @@ p {
 	padding-top: 50px;
 	margin-bottom: 0;
 }
-.content-page {
+/*.content-page {
 	background: #DCDCDC;
 	background-size: cover;
-}
+}*/
 /*cart tags*/
 .cart {
 	width: 300px;
@@ -98,10 +98,11 @@ p {
 }
 .tags-page {
 	width: 940px;
-	margin-left: 500px;
+	margin: 0 auto;
 	padding-top: 170px;
-	padding-bottom: 20px;
+	padding-bottom: 100px;
 	background: white;
+
 }
 .tags ul{
 	list-style-type: none;
@@ -172,6 +173,7 @@ p {
 }
 .photo-home {
 	margin-bottom: -10px;
+	background: white;
 }
 .icon img{
 	width: 100px;
@@ -309,9 +311,7 @@ p {
 	margin-top: 20px;
 	list-style: none;
 }
-#contactForm input  {
-	margin-left: 150px;
-}
+
 #contactForm textarea {
 	margin-left: 10px;
 	text-align: left;
@@ -333,6 +333,10 @@ p {
 	cursor: pointer;
 	font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
 }
+#enterComment {
+	margin-bottom: 50px;
+	margin-left: 394px;
+}
 .form-button:hover input {
 	background: #46b8da;
 }
@@ -342,10 +346,10 @@ p {
 	height: 28px;
 	text-align: center;
 	background:  #00CCCC;
-	margin-left: 820px;
+	margin-left: 430px;
 	border: 2px solid #00CED1;
 	border-radius: 5px;
-	margin-top: -36px;
+	margin-top: 50px;
 	padding-top: 4px;
 	float: left;
 	font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
