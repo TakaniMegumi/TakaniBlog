@@ -8,7 +8,6 @@ var $body = $('body');
 
 function submitComment() {
 	if (localStorage.getItem('authorization')) {
-
 		$.ajax({
 			beforeSend: function(xhr) {
 				xhr.setRequestHeader('Authorization', localStorage.getItem('authorization'));
@@ -21,28 +20,11 @@ function submitComment() {
 			dataType: 'json',
 
 			success: function(responseData) {
-
 				var creatorUl = document.getElementById('creatorUl');
 				var text = '<ul>';
-				 {
-					text += '<li class="styleLogin">' + responseData.profile.login + '</li>';
-					text += '<li class="styleDate">' + formatDate(responseData.created_at) + '</li>';
-					text += '<li class="styleUserPic">' + '<img width=35 height=30 src="'
-					+ responseData.profile.userpic + '"/></li>';
-					 text += '<li id="DeleteText"  deleteId="' + responseData.id + '">'
-					 + '<img class="deleteImg"  src="../image/icon.png/delete_32x32.png" alt="">' + '</li>';
-					text += '<li class="styleText">' + responseData.text + '</li>';
-					text += '<li id="TextId"  class="styleText" commentId="' + responseData.id + '" >'
-					+ '<img class="pencilImg" src="../image/icon.png/pencil.png" alt="">' + '</li>';
-
-				 }
+				text += commentNew(responseData);
 				text += '</ul>';
-
-
 				document.getElementById('creatorUl').innerHTML += text;
-
-
-
 				document.getElementById('contactForm').reset();
 			},
 			error: function (responseData) {
@@ -57,7 +39,6 @@ function submitComment() {
 }
 document.getElementById('enterComment').onclick = submitComment;
 
-
 function formatDate(dateObject) {
 	var date = new Date(dateObject);
 	return  date.toLocaleDateString() + ' in ' + date.getHours() + ':' + date.getMinutes();
@@ -65,18 +46,13 @@ function formatDate(dateObject) {
 
 var globalId;
 
-
     function exitForm (){
-		$('.editMode').replaceWith('<li id="TextId"  class="styleText" commentId="' + globalId + '" >'
-		+ '<img id="pencilImg" class="pencilImg" src="../image/icon.png/pencil.png" alt="">' + '</li>')
-
+		$('.editMode').replaceWith(pencilExitForm());
 	}
-
 
 	 function sendPut(){
 	$.ajax({
 		beforeSend: function(xhr) {
-			console.log(localStorage.getItem('authorization'));
 			xhr.setRequestHeader('Authorization', localStorage.getItem('authorization'));
 			xhr.setRequestHeader('Content-Type', 'application/json');
 		},
@@ -87,9 +63,7 @@ var globalId;
 		dataType: 'json',
 
 		success: function(responseData) {
-
 			$('#' + responseData.id).html(responseData.text);
-			console.log(responseData.profile.login);
 			$('#newText').val('');
 		},
 		error: function (responseData){
@@ -100,7 +74,6 @@ var globalId;
      function makeDelete(callback){
 	$.ajax({
 		beforeSend: function(xhr) {
-			console.log(localStorage.getItem('authorization'));
 			xhr.setRequestHeader('Authorization', localStorage.getItem('authorization'));
 			xhr.setRequestHeader('Content-Type', 'application/json');
 		},
@@ -111,7 +84,6 @@ var globalId;
 
 		success: function(responseData) {
 			callback();
-			console.log('Comment deleted successfully!');
 		},
 		error: function (responseData){
 		}
@@ -119,7 +91,6 @@ var globalId;
 }
 	$.ajax({
 		beforeSend: function (xhr) {
-			console.log(localStorage.getItem('authorization'));
 			xhr.setRequestHeader('Authorization', localStorage.getItem('authorization'));
 			xhr.setRequestHeader('Content-Type', 'application/json');
 		},
@@ -130,28 +101,12 @@ var globalId;
 
 		success: function (responseData) {
 			var creatorUl = document.getElementById('creatorUl');
+			var tmpComment = '';
 			var text = '<ul>';
 			for (var i = 0; i < responseData.length; i++) {
-				text += '<div id="opacityDiv">';
-				text += '<li class="styleLogin">' + responseData[i].profile.login + '</li>';
-				text += '<li class="styleDate">' + formatDate(responseData[i].created_at) + '</li>';
-				text += '<li class="styleUserPic">' + '<img width=35 height=30 src="'
-				+ responseData[i].profile.userpic + '"/></li>';
-
-				if (responseData[i].is_author == 1) {
-					text += '<li id="DeleteText"  deleteId="' + responseData[i].id + '">'
-					+ '<img class="deleteImg"  src="../image/icon.png/delete_32x32.png" alt="">' + '</li>';
-				}
-				//text += '<li id="' + responseData[i].id + '" class="styleText">' + responseData[i].text + '</li>';
-				text += '<li id="' + responseData[i].id + '" class="styleText">' + responseData[i].text + '</li>';
-
-				if (responseData[i].is_author == 1){
-					text += '<li id="TextId"  class="styleText" commentId="' + responseData[i].id + '" >'
-					+ '<img id="pencilImg" class="pencilImg" src="../image/icon.png/pencil.png" alt="">' + '</li>';
-				}
-				text += '<hr size=0 width=500px color=#DCDCDC style="margin-left: 30px; margin-bottom: -0.5px">';
-				text += '</div>';
+				tmpComment += commentNew(responseData[i]);
 			}
+			text += tmpComment;
 			text += '</ul>';
 			document.getElementById('creatorUl').innerHTML = text;
 			var nameComments = document.getElementById('nameComments');
@@ -166,17 +121,14 @@ var globalId;
 		}
 	});
 
-
 $body.on('click', '#TextId', function() {
 	$currentElement = $(this);
 	globalId = $(this).attr('commentId');
 	$(this).replaceWith(getEditArea());
 });
 
-
 /*This one deletes comment*/
-$(function(){
-		$('body').on('click', '#DeleteText', function () {
+$body.on('click', '#DeleteText', function () {
 			globalId = $(this).attr('deleteId');
 			thisCopy = $(this).parent();
 			$(thisCopy).animate({'margin-left': "350px"}, 200);
@@ -185,7 +137,6 @@ $(function(){
 					thisCopy.remove();
 				});
 			});
-		});
 });
 
 $body.on('click', '#backToTop', function(){
@@ -198,9 +149,35 @@ $body.on('click', '#pencilImg', function() {
 });
 */
 
+
 function getEditArea() {
 	return '<li class="styleText editMode"><textarea id="newText" >'
 	+ '</textarea> <input  id="buttonNewTextCancel" onclick="exitForm ()" type="button" value="Cancel">'
 	+ '</input><input  id="buttonNewTextOk" onclick="sendPut()" type="button" value="Ok">' + '</input ></li>';
 }
+function pencilExitForm() {
+	return '<li id="TextId"  class="styleText" commentId="' + globalId + '" >'
+	+ '<img id="pencilImg" class="pencilImg" src="../image/icon.png/pencil.png" alt="">' + '</li>';
+}
 
+function commentNew(responseData){
+	var text = '';
+		text += '<div id="opacityDiv">';
+		text += '<li class="styleLogin">' + responseData.profile.login + '</li>';
+		text += '<li class="styleDate">' + formatDate(responseData.created_at) + '</li>';
+		text += '<li class="styleUserPic">' + '<img width=35 height=30 src="'
+		+ responseData.profile.userpic + '"/></li>';
+		if (responseData.is_author == 1) {
+			text += '<li id="DeleteText"  deleteId="' + responseData.id + '">'
+			+ '<img class="deleteImg"  src="../image/icon.png/delete_32x32.png" alt="">' + '</li>';
+		}
+		text += '<li id="' + responseData.id + '" class="styleText">' + responseData.text + '</li>';
+		if (responseData.is_author == 1){
+			text += '<li id="TextId"  class="styleText " commentId="' + responseData.id + '" >'
+			+ '<img id="pencilImg" class="pencilImg" src="../image/icon.png/pencil.png" alt="">' + '</li>';
+		}
+		text += '<hr size=0 width=500px color=#DCDCDC style="margin-left: 30px; margin-bottom: -0.5px">';
+		text += '</div>';
+
+	return text;
+}

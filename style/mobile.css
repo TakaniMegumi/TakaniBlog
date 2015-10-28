@@ -1,4 +1,4 @@
-﻿@media all and (min-width: 500px) and (max-width: 800px)
+﻿@media all and (min-width:400px) and (max-width: 600px)
 {
 	 #body-overflow {
 		overflow-y: scroll;
@@ -9,19 +9,29 @@
 		float: left;
 	}
 	.menu li {
-		margin-top: 40px;
+		margin-top: 20px;
 	}
 	.header-logo {
 		margin-top: 10px;
 		margin-left: 10px;
 	}
 	.menu li {
-		margin-left: 3%;
+		margin-left:1%;
 	}
-	.reg , .log {
+	.reg, .log, .exit {
 		border-radius: 10px;
-		margin: -20px 180px 0 -100px;
+		margin-left: 140px;
 	}
+	.exit{
+		margin-top: -100px;
+	}
+	.reg{
+		margin-top: -64px;
+	}
+	.log{
+		margin-top: -20px;
+	}
+
 	.article h3 {
 		line-height: 1.54em;
 		margin-bottom: 30px;
