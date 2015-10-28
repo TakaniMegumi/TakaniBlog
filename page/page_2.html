@@ -15,10 +15,12 @@
 			<ul>
 				<li><a href="../index.html">HOME</a></li>
 				<li><a href="#">NEWS</a></li>
-				<li><a href="../page/travel.html">TRAVEL</a></li>
+				<li><a href="#">TRAVEL</a></li>
 				<li><a href="../page/other.html">OTHER</a></li>
 				<li><a href="#">SOCIETY</a></li>
 			</ul>
+			<a id="articleLogIn" class="log" href="../page/loginForm.html">Log in</a>
+			<a  id="exit" class="exit" href="../page/page_2.html">Exit</a>
 		</div>
 		</div>
 		<div class="content-page">
@@ -50,29 +52,36 @@
 					fere a nobis explicatam esse his litteris arbitramur, in quibus, quantum potuimus, non modo quid
 					nobis probaretur, sed etiam quid a singulis philosophiae disciplinis diceretur, persecuti sumus.
 				</p>
-				<hr size=1 width=100% color=#DCDCDC>
-				<div id="respond" class="comment-respond">
-					<h3>Add a Comment</h3>
-					<div class="form">
-						<form id="contactForm">
+				<hr size=0.5 width=100% color=#DCDCDC>
+				<h3>Add a Comment</h3>
+				<div class="form">
+					<form id="contactForm">
 						<fieldset>
 							<ul>
 								<li>
-									<textarea id="comments" name="comments"  cols="52" rows="4" placeholder="Comments"></textarea>
+									<textarea id="comments" name="comments"  cols="65" rows="4" placeholder="Comments"></textarea>
 								</li>
 								<li class="form-button">
-									<input type="submit" value="SUBMIT"/>
+									<input id="enterComment"  type="button" value="SUBMIT"/>
 								</li>
 							</ul>
 						</fieldset>
 					</form>
-					</div>
-					<div><a class="button" href="#body-overflow">Back to top</a></div>
+				</div>
+				<hr size=0.5 width=100% color=#DCDCDC>
+				<div id="nameComments"></div>
+				<ul id="creatorUl"></ul>
+				<div id="respond" class="comment-respond">
+					<!--<div><a class="button" href="#body-overflow">Back to top</a></div>-->
+					<div id="backToTop" class="button">Back to top</div>
+				</div>
 				</div>
 			</div>
-		</div>
 	<div class="footer">
 		<p>Takani blog(с)2015</p>
 	</div>
 </body>
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="../js/comment_page_2.js"></script>
+<script src="../js/exit.js"></script>
 </html>
