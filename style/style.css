@@ -84,10 +84,6 @@ p {
 	padding-top: 50px;
 	margin-bottom: 0;
 }
-/*.content-page {
-	background: #DCDCDC;
-	background-size: cover;
-}*/
 /*cart tags*/
 .cart {
 	width: 300px;
@@ -224,7 +220,6 @@ p {
 	position: relative;
 	list-style: none;
 }
-
 #newText {
 	width: 100%;
 	padding: 10px;
@@ -245,11 +240,9 @@ p {
 	font-size: 12px;
 	font-weight: 600;
 }
-
 #buttonNewTextCancel:hover, #buttonNewTextOk:hover {
 	color: #717171;
 }
-
 .styleUserPic img {
 	width: 55px;
 	height: 50px;
@@ -259,7 +252,6 @@ p {
 	margin-bottom: 10px;
 	border: 1px solid gainsboro;
 }
-
 .wordComments p{
 	color: #00CCCC;
 	font-family: 'Courier New', Courier, monospace;
