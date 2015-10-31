@@ -5,6 +5,9 @@
  */
 
 var $body = $('body');
+var commentNumber = document.getElementById('commentValue').value;
+console.log(document.getElementById('commentValue').value);
+var currentLocation = window.location.href;
 
 function submitComment() {
 	if (localStorage.getItem('authorization')) {
@@ -16,7 +19,7 @@ function submitComment() {
 			type: 'POST',
 			url: 'http://52.26.206.29:3000/comments',
 			crossDomain: true,
-			data: '{"article_id":1, "text": "' + document.getElementById('comments').value  +'"}',
+			data: '{"article_id": '+commentNumber+', "text": "' + document.getElementById('comments').value  +'"}',
 			dataType: 'json',
 
 			success: function(responseData) {
@@ -32,7 +35,7 @@ function submitComment() {
 			}
 		});
 	} else {
-		localStorage.setItem('referenceLink', 'file:///J:/Takani/Takani_blog/page/page_1.html');
+		localStorage.setItem('referenceLink',currentLocation);
 		document.location.href = ('file:///J:/Takani/Takani_blog/page/loginForm.html');
 		return false;
 	}
@@ -95,7 +98,7 @@ var globalId;
 			xhr.setRequestHeader('Content-Type', 'application/json');
 		},
 		type: 'GET',
-		url: 'http://52.26.206.29:3000/comments?article_id=1&limit=10&offset=0',
+		url: 'http://52.26.206.29:3000/comments?article_id=' +commentNumber + '&limit=10&offset=0',
 		crossDomain: true,
 		dataType: 'json',
 

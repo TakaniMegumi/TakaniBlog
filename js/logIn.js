@@ -29,7 +29,6 @@
 			} else {
 				document.location.href = ("file:///J:/Takani/Takani_blog/index.html");
 			}
-
 		})
 		.fail(function(data) {
 			if (!data.responseJSON.email){
