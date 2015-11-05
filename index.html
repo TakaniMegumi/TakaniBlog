@@ -4,8 +4,9 @@
 	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Takani blog</title>
-	<link rel="stylesheet" type="text/css" href="style/style.css">
 	<link rel="icon" href="favicon/favicon.ico" type="image/gif" sizes="16x16">
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+	<link rel="stylesheet" href="style/mobile.css"/>
 </head>
 <body id="body-overflow">
 <div class="header">
@@ -19,11 +20,12 @@
 			<li><a href="#">SOCIETY</a></li>
 		</ul>
 	</div>
-	<a class="log" href="page/loginForm.html">Log in</a>
-	<a class="reg" href="page/toRegister.html">Sign up</a>
-	<a  id="exit" class="exit" href="index.html">Exit</a>
+	<div id="buttonExitRegLog">
+		<a id="exit" href="index.html"><button  class="exit">Exit</button></a>
+		<a  href="page/toRegister.html"><button class="reg">Sign up</button></a>
+	    <a  href="page/loginForm.html"><button class="log">Log in</button></a>
+	</div>
 </div>
-<div class="content">
 	<div class="photo-home"><img id="photoHome" src="image/img.jpg/tumblr_msjtpsLtbg1qzya49o1_1280.jpg" alt="">
 	</div>
 	<div class="article">
@@ -104,7 +106,6 @@
 			</li>
 		</ul>
 	</div>
-</div>
 <div class="photo-home"><img src="image/img.jpg/tumblr_nlioylEU8c1sy6m2qo1_1280.jpg" alt="">
 </div>
 <div class="article">
