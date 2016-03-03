@@ -64,18 +64,18 @@ p {
 }
 .menu li{
 	padding: 3px;
-	margin: 40px 10px 0 50px;
+	margin: 40px 2px 0 50px;
 	list-style-type: none;
 	display: inline-block;
 	float: left;
 	font-weight: 500;
 }
 #buttonExitRegLog {
-	 margin-left: 1580px;
+	 margin-left: 83%;
 	 margin-top: 40px;
  }
 #buttonExitRegLogArticle{
-	margin-left: 1680px;
+	margin-left: 88.5%;
 	margin-top: 40px;
 }
 .exit, .reg, .log {
@@ -98,12 +98,48 @@ p {
 .reg:hover , .log:hover, .exit:hover{
 	color: black;
 }
+/*nav toggle*/
+#nav-toggle {
+	position: relative;
+	display: none;
+	width:35px;
+	height:25px;}
+#nav-toggle span {
+	position: absolute;
+	left: 0;
+	top: 10px;
+}
+#nav-toggle span,
+#nav-toggle span:before,
+#nav-toggle span:after {
+	position: absolute;
+	display: block;
+	content: '';
+	height: 4px;
+	width: 35px;
+	background: white;
+	border-radius: 1px;
+	cursor: pointer;
+}
+#nav-toggle span:before {
+	top: -10px;
+}
+#nav-toggle span:after {
+	bottom: -10px;
+}
 /*cart tags*/
+.news-href {
+	height: 980px;
+	background: white;
+}
+.news-href ul{
+	list-style-type: none;
+}
 .cart {
 	width: 300px;
 	background: white;
-	margin: 130px 0;
-	margin-left: 70px;
+	margin: 270px 0;
+	margin-left: 68px;
 	float: left;
 }
 .tags-page {
@@ -112,9 +148,6 @@ p {
 	padding-top: 170px;
 	padding-bottom: 100px;
 	background: white;
-}
-.tags ul{
-	list-style-type: none;
 }
 .tags-page h3 {
 	text-align: left;
@@ -174,14 +207,19 @@ p {
 	margin-top: 110px;
 	position: absolute;
 }
-.photo-home img {
-	width: 100%;
+.photo-top {
 	height: 1300px;
+	background: url("../image/img.jpg/tumblr_msjtpsLtbg1qzya49o1_1280.jpg");
 	background-size: cover;
+	background-position: center;
 }
+
 .photo-home {
-	margin-bottom: -10px;
-	background: white;
+	height: 1300px;
+	background: url("../image/img.jpg/tumblr_nlioylEU8c1sy6m2qo1_1280.jpg");
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
 }
 .icon img{
 	width: 100px;
@@ -349,6 +387,7 @@ p {
 	color: white;
 	width: 95px;
 	height: 28px;
+	cursor: pointer;
 	text-align: center;
 	background:  #00CCCC;
 	margin-left: 430px;
